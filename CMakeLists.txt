@@ -1,6 +1,30 @@
 cmake_minimum_required(VERSION 3.27)
-project(project_euler)
+set(PROJ_NAME project_euler_solutions)
+project(${PROJ_NAME}})
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(project_euler main.cpp)
+set(SOURCES
+    main.cpp)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
+
+enable_testing()
+
+add_executable(${PROJ_NAME} ${SOURCES})
+
+target_include_directories(${PROJ_NAME} PRIVATE
+        ${CMAKE_SOURCE_DIR}/solutions
+        ${CMAKE_SOURCE_DIR}/utils
+        ${CMAKE_SOURCE_DIR}/third_party/googletest/googletest/include)
+
+target_link_libraries(${PROJ_NAME} gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(${PROJ_NAME})
+add_test(NAME project_euler_test_all COMMAND ${PROJ_NAME})
+
+
+
+
+
