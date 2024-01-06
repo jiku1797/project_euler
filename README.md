@@ -1,1 +1,1 @@
-[Project Euler](https://projecteuler.net/) solutions
+<a href="https://projecteuler.net/" target="_blank">Project Euler</a> solutions
