@@ -5,13 +5,19 @@ project(${PROJ_NAME}})
 set(CMAKE_CXX_STANDARD 20)
 
 set(SOURCES
-    main.cpp)
+    main.cpp
+        )
+
+set(HEADERS
+    solutions/Problem_1.h
+    utils/arithmetic_sequences.h
+    all_solutions.h)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
 
 enable_testing()
 
-add_executable(${PROJ_NAME} ${SOURCES})
+add_executable(${PROJ_NAME} ${SOURCES} ${HEADERS})
 
 target_include_directories(${PROJ_NAME} PRIVATE
         ${CMAKE_SOURCE_DIR}/solutions
