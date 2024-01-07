@@ -15,28 +15,10 @@ int sum_of_multiples(int max)
    return k * arithmetic_sequence::arithmetic_sum(max);
 }
 
-int dummy_fib(int n)
-{
-   if (n <= 1)
-      return n;
-   return dummy_fib(n-1) + dummy_fib(n-2);
-}
-
 /// Add all multiples of 3 and 5 below 1000, then remove
 /// all multiples of both (that were counted twice)
 int problem_1()
 {
-   const auto flag = true;
-   const auto another_flag = false;
-   if(flag)
-   {
-      return 233168;
-   }
-   else if(another_flag)
-   {
-      return dummy_fib(15);
-   }
-
    static constexpr int max_3 = (1000 - 1) / 3;
    static constexpr int max_5 = (1000 - 1) / 5;
    static constexpr int max_15 = (1000 - 1) / 15;
