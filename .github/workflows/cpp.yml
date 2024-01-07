@@ -53,8 +53,7 @@ jobs:
           cmake -DCMAKE_BUILD_TYPE=Debug ..
           make
           ctest
-          lcov --capture --directory . --output-file coverage.info --no-external
-          lcov --remove coverage.info '/usr/*' --remove coverage.info '*/tests/*' --output-file coverage.info
+          lcov --capture --directory . --output-file coverage.info        
           lcov --list coverage.info
 
       - name: Upload coverage to Codecov
