@@ -30,6 +30,10 @@ include(GoogleTest)
 gtest_discover_tests(${PROJ_NAME})
 add_test(NAME project_euler_test_all COMMAND ${PROJ_NAME})
 
+target_compile_options(${PROJ_NAME} PRIVATE --coverage)
+target_link_options(${PROJ_NAME} PRIVATE --coverage)
+
+
 
 
 
