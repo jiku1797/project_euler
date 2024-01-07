@@ -19,8 +19,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake g++ make
-          sudo apt-get install -y lcov
-          cd /usr/src/gtest
+          sudo apt-get install -y lcov        
+          cd /third_party/googletest/googletest
           sudo cmake CMakeLists.txt
           sudo make
           sudo cp *.a /usr/lib
