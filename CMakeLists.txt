@@ -9,9 +9,12 @@ set(SOURCES
         )
 
 set(HEADERS
-    solutions/Problem_1.h
-    utils/arithmetic_sequences.h
-    all_solutions.h)
+        solutions/Problem_1.h
+        utils/arithmetic_sequences.h
+        all_solutions.h
+        solutions/Problem_2.h
+        utils/fibonacci.h
+        test/fibonacci_test.cpp)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
 
