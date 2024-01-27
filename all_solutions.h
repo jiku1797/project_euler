@@ -5,5 +5,6 @@
 
 #include "Problem_1.h"
 #include "Problem_2.h"
+#include "Problem_3.h"
 
 #endif //PROJECT_EULER_SOLUTIONS_ALL_SOLUTIONS_H
