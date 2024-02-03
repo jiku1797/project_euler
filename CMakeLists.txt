@@ -5,19 +5,23 @@ project(${PROJ_NAME}})
 set(CMAKE_CXX_STANDARD 20)
 
 set(SOURCES
-    main.cpp
+        main.cpp
+        test/fibonacci_test.cpp
+        test/digits.cpp
+        test/primes_test.cpp
         )
 
 set(HEADERS
-        solutions/Problem_1.h
-        utils/arithmetic_sequences.h
         all_solutions.h
-        solutions/Problem_2.h
+        utils/arithmetic_sequences.h
         utils/fibonacci.h
-        test/fibonacci_test.cpp
         utils/primes.h
-        test/primes_test.cpp
-        solutions/Problem_3.h)
+        utils/digits.h
+        solutions/Problem_1.h
+        solutions/Problem_2.h
+        solutions/Problem_3.h
+        solutions/Problem_4.h
+        )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
 
