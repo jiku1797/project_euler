@@ -15,7 +15,10 @@
 
 /// A 6 digit palindrome number a0 + 10*a1 + 10^2*a2 + 10^3*a3 + 10^4*a1 + 10^5*a0
 /// = (1+10^5)*a0 + 10*(10^3+1)*a1 + 10^2*(10+1)*a0 is divisible by 11.
-/// Written as any product, one of them must be a multiple of 11.
+/// Written as any product, one of them must be a multiple of 11,
+/// as can be seen by means of a geometric series:
+/// 10^(2*k+1) + 1 = 11 * (1 - 10 + 10^2 - ... + 10^(2*k))
+/// for any k>=0. 
 /// \return
 int problem_4()
 {
