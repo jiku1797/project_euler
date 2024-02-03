@@ -1,5 +1,5 @@
-#ifndef PROJECT_EULER_SOLUTIONS_DIGITS_H
-#define PROJECT_EULER_SOLUTIONS_DIGITS_H
+#ifndef PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H
+#define PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H
 
 #include <vector>
 #include <concepts>
@@ -7,7 +7,7 @@
 namespace digits
 {
 ///
-/// \param n
+/// \param n A positive integer
 /// \return Digits in "reverse" order (a_0, a_1, ..., a_n)
 std::vector<int> digits(std::integral auto n)
 {
@@ -36,4 +36,4 @@ bool is_palindrome(std::integral auto n)
    return true;
 }
 }
-#endif //PROJECT_EULER_SOLUTIONS_DIGITS_H
+#endif //PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H

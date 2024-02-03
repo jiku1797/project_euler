@@ -5,7 +5,7 @@
 
 #include <algorithm>
 
-#include "digits.h"
+#include "digits_test.h"
 
 /* Largest Palindrome Product
  * A palindromic number reads the same both ways. The largest palindrome made
@@ -18,7 +18,7 @@
 /// Written as any product, one of them must be a multiple of 11,
 /// as can be seen by means of a geometric series:
 /// 10^(2*k+1) + 1 = 11 * (1 - 10 + 10^2 - ... + 10^(2*k))
-/// for any k>=0. 
+/// for any k>=0.
 /// \return
 int problem_4()
 {

@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(SOURCES
         main.cpp
         test/fibonacci_test.cpp
-        test/digits.cpp
+        test/digits_test.cpp
         test/primes_test.cpp
         )
 
@@ -16,7 +16,7 @@ set(HEADERS
         utils/arithmetic_sequences.h
         utils/fibonacci.h
         utils/primes.h
-        utils/digits.h
+        utils/digits_test.h
         solutions/Problem_1.h
         solutions/Problem_2.h
         solutions/Problem_3.h
