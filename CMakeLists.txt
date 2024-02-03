@@ -9,6 +9,7 @@ set(SOURCES
         test/fibonacci_test.cpp
         test/digits_test.cpp
         test/primes_test.cpp
+        test/multiples_test.cpp
         )
 
 set(HEADERS
@@ -21,7 +22,9 @@ set(HEADERS
         solutions/Problem_2.h
         solutions/Problem_3.h
         solutions/Problem_4.h
-        )
+        solutions/Problem_5.h
+        utils/multiples.h
+)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
 
