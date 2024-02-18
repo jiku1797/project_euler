@@ -3,6 +3,14 @@ set(PROJ_NAME project_euler_solutions)
 project(${PROJ_NAME}})
 
 set(CMAKE_CXX_STANDARD 20)
+option(ENABLE_ASAN "Enable Address Sanitizer" OFF)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -Wall")
+
+if(ENABLE_ASAN)
+        list(APPEND ${CMAKE_CXX_FLAGS} "-fsanitize=address")
+        message("ASan enabled")
+endif()
 
 set(SOURCES
         main.cpp

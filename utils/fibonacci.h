@@ -26,7 +26,7 @@ inline underlying_t fibo_traverse(uint32_t n)
    underlying_t b=1;
    underlying_t c;
    if(n==1) return a;
-   for(int i=1; i<n; ++i)
+   for(underlying_t i=1; i<n; ++i)
    {
       c = a + b;
       a = b;

@@ -29,7 +29,7 @@ bool is_palindrome(std::integral auto n)
    const auto ds = digits(n);
    const auto sz = ds.size();
 
-   for(int i=0; i<sz/2; ++i)
+   for(std::size_t i=0; i<sz/2; ++i)
    {
       if(ds[i] != ds[sz - i - 1]) return false;
    }
