@@ -29,3 +29,23 @@ INSTANTIATE_TEST_SUITE_P(
          , std::make_pair<int, int>(83,true)
          , std::make_pair<int, int>(85,false)
          , std::make_pair<int, int>(97,true)));
+
+TEST(TestSieveOfEratosthenes, TestSieveOfEratosthenes)
+{
+   std::array<bool, 10+1> expected{};
+   expected[0] = false;
+   expected[1] = false;
+   expected[2] = true;
+   expected[3] = true;
+   expected[4] = false;
+   expected[5] = true;
+   expected[6] = false;
+   expected[7] = true;
+   expected[8] = false;
+   expected[9] = false;
+   expected[10] = false;
+
+   const auto actual = primes::sieve_of_Eratosthenes<10>();
+
+   EXPECT_EQ(expected, actual);
+}

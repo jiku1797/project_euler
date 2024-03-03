@@ -1,6 +1,7 @@
 #ifndef PROJECT_EULER_SOLUTIONS_PROBLEM_9_H
 #define PROJECT_EULER_SOLUTIONS_PROBLEM_9_H
 
+#include <gtest/gtest.h>
 #include <ranges>
 
 /*
