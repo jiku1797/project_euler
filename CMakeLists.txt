@@ -22,18 +22,22 @@ set(SOURCES
 
 set(HEADERS
         all_solutions.h
+
         utils/arithmetic_sequences.h
+        utils/multiples.h
         utils/fibonacci.h
         utils/primes.h
         utils/digits_test.h
+
         solutions/Problem_1.h
         solutions/Problem_2.h
         solutions/Problem_3.h
         solutions/Problem_4.h
         solutions/Problem_5.h
-        utils/multiples.h
         solutions/Problem_6.h
         solutions/Problem_7.h
+        solutions/Problem_8.h
+        solutions/Problem_9.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
