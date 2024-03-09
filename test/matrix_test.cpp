@@ -3,7 +3,6 @@
 #include "../utils/Matrix.h"
 
 #include <vector>
-#include <ranges>
 
 namespace sr = std::ranges;
 
@@ -119,7 +118,6 @@ TEST(TestMatrix, testTranspose)
                                     2, 5, 8, 11);
 
    EXPECT_TRUE(sr::equal(transpose, expected));
-   std::cout << transpose << '\n';
 }
 
 TEST(TestMatrix, testFill) 

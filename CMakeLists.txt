@@ -19,6 +19,7 @@ set(SOURCES
         test/primes_test.cpp
         test/multiples_test.cpp
         test/matrix_test.cpp
+        test/read_matrix_test.cpp
 )
 
 set(HEADERS
