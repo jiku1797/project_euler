@@ -18,7 +18,8 @@ set(SOURCES
         test/digits_test.cpp
         test/primes_test.cpp
         test/multiples_test.cpp
-        )
+        test/matrix_test.cpp
+)
 
 set(HEADERS
         all_solutions.h
@@ -28,6 +29,8 @@ set(HEADERS
         utils/fibonacci.h
         utils/primes.h
         utils/digits_test.h
+        utils/Matrix.h
+        utils/read_matrix.h
 
         solutions/Problem_1.h
         solutions/Problem_2.h
@@ -39,6 +42,7 @@ set(HEADERS
         solutions/Problem_8.h
         solutions/Problem_9.h
         solutions/Problem_10.h
+        solutions/Problem_11.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)

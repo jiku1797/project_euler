@@ -43,7 +43,7 @@ constexpr sieve_t<N> sieve_of_Eratosthenes()
    {
       if (sieve[p] == true)
       {
-         for(int i = p * p; i <= N; i += p)
+         for(std::size_t i = p * p; i <= N; i += p)
          {
             sieve[i] = false;
          }
