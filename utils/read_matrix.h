@@ -24,7 +24,6 @@ Matrix<T, ROW, COL> read(std::string_view str)
       auto [p, ec] = std::from_chars(begin, end, num);
       if(ec != std::errc())
       {
-         printf("BAD\n");
          ++begin;
          continue;
       }
