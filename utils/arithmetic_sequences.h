@@ -8,7 +8,7 @@ namespace arithmetic_sequence
 /// Calculates 1 + 2 + ... + \p last
 /// \param last Maximum element
 /// \return Arithmetic sum
-auto arithmetic_sum(auto last)
+auto arithmetic_sum(std::integral auto last)
 {
    return (1 + last) * last / 2;
 }
