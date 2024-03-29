@@ -5,13 +5,20 @@
 
 #include <unordered_map>
 #include <algorithm>
-
+/*
+ * Longest Collatz Sequence
+ * The following iterative sequence is defined for the set of positive integers:
+ * n -> n/2 (n is even)
+ * n -> 3n + 1 (n is odd)
+ * Using the rule above and starting with 13, we generate the following sequence:
+ * 13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+ * Although it has not been proved yet (Collatz Problem), it is thought that all starting
+ * numbers finish at 1.
+ * Which starting number, under one million, produces the longest chain?
+ * NOTE: Once the chain starts the terms are allowed to go above one million.
+ */
 namespace problem_14
 {
-// Cache sequence lengths
-// K = Collatz number, V = sequence length
-//inline static std::unordered_map<int, int> collatz_length_cache = {{1, 1}, {2, 2}};
-
 using c_int_t = uint64_t;
 
 [[nodiscard]] c_int_t next_collatz(c_int_t n)
@@ -50,7 +57,6 @@ public:
    }
 
 private:
-
    cache_t cache_;
 };
 
