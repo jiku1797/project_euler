@@ -15,5 +15,6 @@
 #include "Problem_10.h"
 #include "Problem_11.h"
 #include "Problem_12.h"
+#include "Problem_13.h"
 
 #endif //PROJECT_EULER_SOLUTIONS_ALL_SOLUTIONS_H
