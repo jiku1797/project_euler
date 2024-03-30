@@ -58,7 +58,7 @@ public:
    }
 
    template <class... T>
-   explicit consteval Matrix(const T... args)
+   explicit constexpr Matrix(T... args)
    {
       if constexpr(sizeof...(T) == 1)
       {
