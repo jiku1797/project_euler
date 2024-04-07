@@ -65,7 +65,7 @@ std::size_t problem_17()
       const auto decade_sz = decade.size();
       count += decade_sz;
 
-      for(const auto i : std::views::iota(0, 9))
+      for(const int i : std::views::iota(0, 9))
       {
          count += decade_sz + words_base[i].size();
       }
@@ -78,7 +78,7 @@ std::size_t problem_17()
    const auto hundred_sz = "hundred"sv.size();
    const auto and_sz = "and"sv.size();
 
-   for(const auto i : std::views::iota(0, 9))
+   for(const int i : std::views::iota(0, 9))
    {
       const auto base_sz = words_base[i].size();
 
