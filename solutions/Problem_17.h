@@ -53,8 +53,6 @@ std::array<std::string, 8> decade_words = {
    "ninety"
 };
 
-static const std::string hundred_word = "hundredand";
-
 std::size_t problem_17()
 {
    // count up to 19
@@ -77,15 +75,16 @@ std::size_t problem_17()
    const auto first_99_count = count;
 
    // count to 999
+   const auto hundred_sz = "hundred"sv.size();
+   const auto and_sz = "and"sv.size();
+
    for(const auto i : std::views::iota(0, 9))
    {
       const auto base_sz = words_base[i].size();
-      const auto hundred_sz = "hundred"sv.size();
-      const auto and_sz = "and"sv.size();
 
-      // hundreds
+      // even hundreds
       count += base_sz + hundred_sz;
-      //
+      // remaining
       count += (base_sz + hundred_sz + and_sz) * 99 + first_99_count;
    }
 
