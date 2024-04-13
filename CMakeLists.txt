@@ -24,6 +24,7 @@ set(SOURCES
         test/matrix_test.cpp
         test/read_matrix_test.cpp
         test/divisors_test.cpp
+        test/read_vector_of_vectors_test.cpp
 )
 
 set(HEADERS
@@ -37,6 +38,7 @@ set(HEADERS
         utils/Matrix.h
         utils/read_matrix.h
         utils/divisors.h
+        utils/read_vector_of_vectors.h
 
         solutions/Problem_1.h
         solutions/Problem_2.h
@@ -55,6 +57,7 @@ set(HEADERS
         solutions/Problem_15.h
         solutions/Problem_16.h
         solutions/Problem_17.h
+        solutions/Problem_18.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)

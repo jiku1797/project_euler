@@ -7,7 +7,7 @@
 #include <charconv>
 #include <cctype>
 
-namespace matrix_io
+namespace io
 {
 template <typename T, std::size_t ROW, std::size_t COL>
 Matrix<T, ROW, COL> read(std::string_view str)

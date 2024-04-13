@@ -2,13 +2,13 @@
 
 #include "../utils/read_matrix.h"
 
-TEST(TestreadMatrix, testReadGood)
+TEST(TestReadMatrix, testReadGood)
 {
    const char* str = R"(00 01 02
                         03 04 05
                         06 07 08)";
 
-   const auto mat = matrix_io::read<int, 3, 3>(str);
+   const auto mat = io::read<int, 3, 3>(str);
 
    Matrix<int, 3, 3> expected(0, 1, 2,
                               3, 4, 5,
@@ -17,13 +17,13 @@ TEST(TestreadMatrix, testReadGood)
    EXPECT_TRUE(expected == mat);
 }
 
-TEST(TestreadMatrix, testReadWithGarbage)
+TEST(TestReadMatrix, testReadWithGarbage)
 {
    const char* str = R"(00 01 02
                         03 xx 05
                         06 07 08)";
 
-   const auto mat = matrix_io::read<int, 3, 3>(str);
+   const auto mat = io::read<int, 3, 3>(str);
 
    Matrix<int, 3, 3> expected(0, 1, 2,
                               3, 5, 6,
@@ -32,13 +32,13 @@ TEST(TestreadMatrix, testReadWithGarbage)
    EXPECT_TRUE(expected == mat);
 }
 
-TEST(TestreadMatrix, testReadTooLong)
+TEST(TestReadMatrix, testReadTooLong)
 {
    const char* str = R"(00 01 02
                         03 04 05
                         06 07 08)";
 
-   const auto mat = matrix_io::read<int, 2, 2>(str);
+   const auto mat = io::read<int, 2, 2>(str);
 
    Matrix<int, 2, 2> expected(0, 1,
                               2, 3);
