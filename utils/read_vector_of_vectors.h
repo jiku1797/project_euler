@@ -7,7 +7,6 @@
 #include <cctype>
 #include <iterator>
 #include <utility>
-#include <optional>
 
 namespace io::read_vector_of_vectors
 {
