@@ -14,11 +14,12 @@ using underlying_t = int;
 using row_t = std::vector<underlying_t>;
 using result_t = std::vector<row_t>;
 
+namespace details
+{
 ///
 /// \param str String to parse from begin to newline
 /// \return Parsed row and iterator to first non-parsed element
-inline std::pair<row_t, std::string_view::const_iterator>
-   read_row(std::string_view str)
+inline std::pair<row_t, std::string_view::const_iterator> read_row(std::string_view str)
 {
    row_t row;
    auto begin = str.begin();
@@ -53,6 +54,7 @@ inline std::pair<row_t, std::string_view::const_iterator>
 
    return std::make_pair(row, begin);
 }
+} // details
 
 inline result_t read(std::string_view str)
 {
@@ -63,7 +65,7 @@ inline result_t read(std::string_view str)
 
    while(begin != end)
    {
-      auto [row, ptr] = read_row(std::string_view(begin, end));
+      auto [row, ptr] = details::read_row(std::string_view(begin, end));
       ret.push_back(std::move(row));
       begin = ptr;
    }
