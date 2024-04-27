@@ -17,6 +17,7 @@ endif()
 
 set(SOURCES
         main.cpp
+
         test/fibonacci_test.cpp
         test/digits_test.cpp
         test/primes_test.cpp
@@ -25,6 +26,7 @@ set(SOURCES
         test/read_matrix_test.cpp
         test/divisors_test.cpp
         test/read_vector_of_vectors_test.cpp
+        test/factorial_test.cpp
 )
 
 set(HEADERS
@@ -39,6 +41,7 @@ set(HEADERS
         utils/read_matrix.h
         utils/divisors.h
         utils/read_vector_of_vectors.h
+        utils/factorials.h
 
         solutions/Problem_1.h
         solutions/Problem_2.h
@@ -59,6 +62,8 @@ set(HEADERS
         solutions/Problem_17.h
         solutions/Problem_18.h
         solutions/Problem_19.h
+        solutions/Problem_20.h
+
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
