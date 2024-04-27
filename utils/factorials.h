@@ -33,7 +33,7 @@ inline Digits factorial(int n)
 
    digits.reserve(num_digits);
 
-   for (unsigned int factor = 2; factor <= n; factor++)
+   for (const int factor : std::views::iota(2, n+1))
    {
       uint8_t carry = 0;
 
