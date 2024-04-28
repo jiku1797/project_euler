@@ -21,3 +21,13 @@ TEST(TestNumDivisors, Basic)
    EXPECT_EQ(num_div[11], 2);
    EXPECT_EQ(num_div[12], 6);
 }
+
+TEST(TestSumOfDivisors, Basic)
+{
+   EXPECT_EQ(sum_of_divisors(2), 1);
+   EXPECT_EQ(sum_of_divisors(3), 1); // 1
+   EXPECT_EQ(sum_of_divisors(4), 3); // 1 + 2
+   EXPECT_EQ(sum_of_divisors(5), 1); // 1
+   EXPECT_EQ(sum_of_divisors(6), 6); // 1 + 2 + 3
+   EXPECT_EQ(sum_of_divisors(12), 16); // 1 + 2 + 3 + 4 + 6
+}
