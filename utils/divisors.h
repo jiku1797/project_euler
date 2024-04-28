@@ -26,6 +26,29 @@ constexpr std::vector<T> num_divisors_sieve(std::size_t N)
 
    return num_divisors;
 }
+
+/// Obtain the sum of all divisors of \p n
+/// 1 counts as divisor, but not \p n
+template <std::integral T>
+inline auto sum_of_divisors(T n)
+{
+   T divisor_sum = 1;
+
+   for (T divisor = 2; divisor * divisor <= n; ++divisor)
+   {
+      if(n % divisor == 0)
+      {
+         divisor_sum += divisor;
+
+         auto other_divisor = n / divisor;
+         // avoid double counting square numbers
+         if(other_divisor != divisor)
+            divisor_sum += other_divisor;
+      }
+   }
+
+   return divisor_sum;
+}
 }
 
 #endif //PROJECT_EULER_SOLUTIONS_DIVISORS_H
