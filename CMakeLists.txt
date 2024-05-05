@@ -27,6 +27,7 @@ set(SOURCES
         test/divisors_test.cpp
         test/read_vector_of_vectors_test.cpp
         test/factorial_test.cpp
+        test/read_words_test.cpp
 )
 
 set(HEADERS
@@ -42,6 +43,7 @@ set(HEADERS
         utils/divisors.h
         utils/read_vector_of_vectors.h
         utils/factorials.h
+        utils/read_words.h
 
         solutions/Problem_1.h
         solutions/Problem_2.h
@@ -64,6 +66,7 @@ set(HEADERS
         solutions/Problem_19.h
         solutions/Problem_20.h
         solutions/Problem_21.h
+        solutions/Problem_22.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)

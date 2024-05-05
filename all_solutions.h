@@ -24,5 +24,6 @@
 #include "Problem_19.h"
 #include "Problem_20.h"
 #include "Problem_21.h"
+#include "Problem_22.h"
 
 #endif //PROJECT_EULER_SOLUTIONS_ALL_SOLUTIONS_H
