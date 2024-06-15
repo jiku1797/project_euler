@@ -69,5 +69,10 @@ inline underlying_t fibo_binet(uint32_t n)
    return static_cast<underlying_t>(
       (std::pow(phi, n+1) - std::pow(psi, n+1)) / std::sqrt(5));
 }
+
+inline uint32_t num_fibo_digits(uint32_t n)
+{
+   return static_cast<uint32_t>(std::floor(n*std::log10(phi) - 0.5*std::log10(5.0))) + 1;
+}
 }
 #endif //PROJECT_EULER_SOLUTIONS_FIBONACCI_H

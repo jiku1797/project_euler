@@ -37,7 +37,7 @@ set(HEADERS
         utils/multiples.h
         utils/fibonacci.h
         utils/primes.h
-        utils/digits_test.h
+        utils/digits.h
         utils/Matrix.h
         utils/read_matrix.h
         utils/divisors.h
@@ -69,6 +69,7 @@ set(HEADERS
         solutions/Problem_22.h
         solutions/Problem_23.h
         solutions/Problem_24.h
+        solutions/Problem_25.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)

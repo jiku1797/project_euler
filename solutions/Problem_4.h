@@ -5,7 +5,7 @@
 
 #include <algorithm>
 
-#include "digits_test.h"
+#include "digits.h"
 
 /* Largest Palindrome Product
  * A palindromic number reads the same both ways. The largest palindrome made

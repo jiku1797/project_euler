@@ -1,8 +1,9 @@
-#ifndef PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H
-#define PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H
+#ifndef PROJECT_EULER_SOLUTIONS_DIGITS_H
+#define PROJECT_EULER_SOLUTIONS_DIGITS_H
 
 #include <vector>
 #include <concepts>
+#include <cmath>
 
 namespace digits
 {
@@ -35,5 +36,10 @@ bool is_palindrome(std::integral auto n)
    }
    return true;
 }
+
+auto num_digits(std::integral auto n)
+{
+   return std::floor(std::log10(n)) + 1;
 }
-#endif //PROJECT_EULER_SOLUTIONS_DIGITS_TEST_H
+}
+#endif //PROJECT_EULER_SOLUTIONS_DIGITS_H
