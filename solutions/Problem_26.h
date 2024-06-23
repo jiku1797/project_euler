@@ -27,9 +27,9 @@ namespace problem_26
 {
 using underlying_t = uint32_t;
 
-constexpr underlying_t cycle_length(underlying_t n)
+inline underlying_t cycle_length(underlying_t n)
 {
-   constexpr underlying_t not_seen_value = 0;
+   static constexpr underlying_t not_seen_value = 0;
    std::vector seen(n, not_seen_value);
 
    underlying_t position = 1;
