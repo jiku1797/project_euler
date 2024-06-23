@@ -9,7 +9,7 @@
  * What is the largest prime factor of the number 600851475143?
  */
 
-int problem_3()
+inline int problem_3()
 {
    static constexpr auto num = 600851475143;
 

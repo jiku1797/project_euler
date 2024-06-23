@@ -42,7 +42,7 @@ std::set<underlying_t> get_amicable_pairs(underlying_t upper_bound)
    return amicable_pairs;
 }
 
-underlying_t problem_21()
+inline underlying_t problem_21()
 {
    static constexpr underlying_t upper_bound = 10'000;
    const auto amicable_pairs = get_amicable_pairs(upper_bound);

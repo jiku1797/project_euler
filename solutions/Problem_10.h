@@ -12,7 +12,7 @@
  * Find the sum of all the primes below two million.
  */
 
-std::size_t problem_10()
+inline std::size_t problem_10()
 {
    static constexpr int max = 2E6;
    std::size_t sum = 0;

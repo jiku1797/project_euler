@@ -18,7 +18,7 @@
 
 namespace problem_20
 {
-int problem_20()
+inline int problem_20()
 {
    const auto digits = factorial::factorial(100);
 

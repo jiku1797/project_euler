@@ -31,7 +31,7 @@
 ///
 /// \param upper_bound Upper bound on n, generating triangular numbers T_n
 /// \return Iff successful, an optional holding the first T_n with more than 500 divisors
-std::optional<uint32_t> try_with_bound(uint32_t upper_bound)
+inline std::optional<uint32_t> try_with_bound(uint32_t upper_bound)
 {
    static constexpr uint32_t min_num_factors = 500;
 
@@ -60,7 +60,7 @@ std::optional<uint32_t> try_with_bound(uint32_t upper_bound)
    return std::nullopt;
 }
 
-uint32_t problem_12()
+inline uint32_t problem_12()
 {
    std::size_t upper_bound = 1 << 14;
 

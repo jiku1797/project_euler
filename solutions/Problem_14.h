@@ -4,7 +4,6 @@
 #include<gtest/gtest.h>
 
 #include <unordered_map>
-#include <algorithm>
 /*
  * Longest Collatz Sequence
  * The following iterative sequence is defined for the set of positive integers:
@@ -21,7 +20,7 @@ namespace problem_14
 {
 using c_int_t = uint64_t;
 
-[[nodiscard]] c_int_t next_collatz(c_int_t n)
+[[nodiscard]] inline c_int_t next_collatz(c_int_t n)
 {
    if(n % 2 == 0)
    {
@@ -88,7 +87,7 @@ private:
    collatz_cache cache_{};
 };
 
-c_int_t problem_14()
+inline c_int_t problem_14()
 {
    static constexpr int upper_bound = 1'000'000;
 

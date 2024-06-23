@@ -12,7 +12,7 @@
  * find the sum of the even-valued terms.
  */
 
-uint32_t problem_2()
+inline uint32_t problem_2()
 {
    uint32_t sum = 0;
 

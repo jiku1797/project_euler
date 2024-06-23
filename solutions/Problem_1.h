@@ -17,7 +17,7 @@ int sum_of_multiples(int max)
 
 /// Add all multiples of 3 and 5 below 1000, then remove
 /// all multiples of both (that were counted twice)
-int problem_1()
+inline int problem_1()
 {
    static constexpr int max_3 = (1000 - 1) / 3;
    static constexpr int max_5 = (1000 - 1) / 5;

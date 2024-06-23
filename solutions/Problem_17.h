@@ -21,7 +21,7 @@
 
 namespace problem_17
 {
-std::array<std::string, 19> words_base = {
+inline std::array<std::string, 19> words_base = {
    "one",
    "two",
    "three",
@@ -42,7 +42,7 @@ std::array<std::string, 19> words_base = {
    "eighteen",
    "nineteen"};
 
-std::array<std::string, 8> decade_words = {
+inline std::array<std::string, 8> decade_words = {
    "twenty",
    "thirty",
    "forty",
@@ -53,7 +53,7 @@ std::array<std::string, 8> decade_words = {
    "ninety"
 };
 
-std::size_t problem_17()
+inline std::size_t problem_17()
 {
    // count up to 19
    std::size_t count = std::accumulate(words_base.begin(), words_base.end(), 0,
@@ -75,8 +75,8 @@ std::size_t problem_17()
    const auto first_99_count = count;
 
    // count to 999
-   const auto hundred_sz = "hundred"sv.size();
-   const auto and_sz = "and"sv.size();
+   constexpr auto hundred_sz = "hundred"sv.size();
+   constexpr auto and_sz = "and"sv.size();
 
    for(const int i : std::views::iota(0, 9))
    {

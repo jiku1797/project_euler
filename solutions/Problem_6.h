@@ -22,7 +22,7 @@
 /// i.e. we get the recursive formula
 /// C_N = C_{N-1} + N^2 * (N-1), with C_1 = 0,
 /// for the difference where C_100 denotes the solution.
-int problem_6()
+inline int problem_6()
 {
    int current = 0;
    for(int i = 2; i<=100; ++i)

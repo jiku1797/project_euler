@@ -23,7 +23,7 @@
 
 namespace problem_19
 {
-int problem_19()
+inline int problem_19()
 {
    int cnt = 0;
    for (int y{1901}; y < 2001; ++y)

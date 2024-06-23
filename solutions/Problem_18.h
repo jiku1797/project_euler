@@ -51,7 +51,7 @@ static constexpr const char* input = R"(75
 
 io::read_vector_of_vectors::result_t numbers = io::read_vector_of_vectors::read(input);
 
-int problem_18()
+inline int problem_18()
 {
    const std::size_t num_rows = numbers.size();
 

@@ -14,7 +14,7 @@
 
 namespace problem_16
 {
-int problem_16()
+inline int problem_16()
 {
    using Digits = std::vector<unsigned short>;
    std::vector<Digits> power_two_digits = {{2}}; // start at 2^1

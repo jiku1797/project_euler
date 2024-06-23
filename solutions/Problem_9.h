@@ -19,7 +19,7 @@ static constexpr bool isPythagoreanTriple(int a, int b, int c)
 }
 
 /// Since a < c it follows that b = 1000 - a - c < 1000 - 2*a
-std::size_t problem_9()
+inline std::size_t problem_9()
 {
    static constexpr int sum = 1000;
 

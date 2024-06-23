@@ -57,7 +57,7 @@ inline static auto grid = R"(08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 
                                  20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
                                  01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48)";
 
-std::size_t problem_11()
+inline std::size_t problem_11()
 {
    static constexpr std::size_t N = 20;
    const auto mat = io::read<int, N, N>(grid);

@@ -5,7 +5,6 @@
 
 #include <array>
 #include <string>
-#include <ranges>
 #include <charconv>
 
 namespace problem_13
@@ -15,7 +14,7 @@ namespace problem_13
  * 50-digit numbers.
  */
 
-std::array<std::string_view, 100> numbers = {"37107287533902102798797998220837590246510135740250",
+inline std::array<std::string_view, 100> numbers = {"37107287533902102798797998220837590246510135740250",
                                              "46376937677490009712648124896970078050417018260538",
                                              "74324986199524741059474233309513058123726617309629",
                                              "91942213363574161572522430563301811072406154908250",
@@ -116,7 +115,7 @@ std::array<std::string_view, 100> numbers = {"3710728753390210279879799822083759
                                              "20849603980134001723930671666823555245252804609722",
                                              "53503534226472524250874054075591789781264330331690"};
 
-uint64_t problem_13()
+inline uint64_t problem_13()
 {
    auto pos = numbers.front().size();
    std::string sum;

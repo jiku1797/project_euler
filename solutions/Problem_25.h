@@ -29,7 +29,7 @@ namespace problem_25
 {
 using underlying_t = uint32_t;
 
-underlying_t problem_25()
+inline underlying_t problem_25()
 {
    static constexpr uint32_t num_digits = 1'000;
    underlying_t index = 1;

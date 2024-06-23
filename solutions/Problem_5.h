@@ -15,7 +15,7 @@
  * numbers from 1 to 20?
  */
 
-int problem_5()
+inline int problem_5()
 {
    const std::array<int, 10> factors = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11};
 

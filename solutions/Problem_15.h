@@ -33,7 +33,7 @@ struct Point
 
 using int_t = uint64_t;
 
-int_t problem_15()
+inline int_t problem_15()
 {
    static constexpr int unknown = -1;
    static constexpr int SIZE = 20 + 1; // 21x21 points in a 20x20 grid

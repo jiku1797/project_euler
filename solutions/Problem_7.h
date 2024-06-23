@@ -14,7 +14,7 @@
  * What is the 10001 prime number?
  */
 
-int problem_7()
+inline int problem_7()
 {
    int num = 1;
    int count = 0;

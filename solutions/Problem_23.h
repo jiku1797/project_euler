@@ -72,7 +72,7 @@ private:
    std::set<underlying_t> abundant_nums_{};
 };
 
-underlying_t problem_23()
+inline underlying_t problem_23()
 {
    const Abundant<upper_limit> abundant{};
 

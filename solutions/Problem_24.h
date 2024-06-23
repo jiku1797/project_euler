@@ -30,7 +30,7 @@ underlying_t to_number(const std::array<T, N>& arr)
                       });
 }
 
-underlying_t problem_24()
+inline underlying_t problem_24()
 {
    static constexpr underlying_t target = 1'000'000;
    std::array<uint8_t, 10> range = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};

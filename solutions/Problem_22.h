@@ -39,7 +39,7 @@ inline int word_score(const std::string& word)
                           [](int acc, char c){return acc + score(c);});
 }
 
-underlying_t problem_22()
+inline underlying_t problem_22()
 {
    using namespace std::string_literals;
    const auto file_path= std::filesystem::current_path().parent_path() / "solutions/0022_names.txt";

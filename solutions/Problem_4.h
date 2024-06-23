@@ -20,7 +20,7 @@
 /// 10^(2*k+1) + 1 = 11 * (1 - 10 + 10^2 - ... + 10^(2*k))
 /// for any k>=0.
 /// \return
-int problem_4()
+inline int problem_4()
 {
    int greatest = 0;
    for(int x=999; x>=100; --x)
