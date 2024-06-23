@@ -24,11 +24,10 @@ inline underlying_t fibo_traverse(uint32_t n)
    assert(n!=0 && "Expects positive n");
    underlying_t a=1;
    underlying_t b=1;
-   underlying_t c;
    if(n==1) return a;
    for(underlying_t i=1; i<n; ++i)
    {
-      c = a + b;
+      const underlying_t c = a + b;
       a = b;
       b = c;
    }
@@ -45,11 +44,10 @@ void fibo_traverse_functor(uint32_t fibo_upper_bound, F func)
 {
    underlying_t a=1;
    underlying_t b=1;
-   underlying_t c;
 
    while(true)
    {
-      c = a + b;
+      const underlying_t c = a + b;
       a = b;
       b = c;
       if(b >= fibo_upper_bound) return;
