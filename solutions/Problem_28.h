@@ -30,7 +30,7 @@
  * UL: 4*j^2 + 2*j + 1
  * LL: 4*j^2 + 1
  * LR: 4*j^2 - 2*j + 1
- * Note howveer that this reasoing is only valid starting from second square (j=1)
+ * Note howveer that this reasoning is only valid starting from second square (j=1)
  * since the first "square" does not have 4 corners. Consequently the sum of all
  * corners can be found by summing 16*j^2 + 4*j + 4 from j=0 to [1001/2] and add
  * 1 for the innermost "square". (There are exact formulas for this, but
