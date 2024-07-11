@@ -32,7 +32,7 @@
  * LR: 4*j^2 - 2*j + 1
  * Note however that this reasoning is only valid starting from second square (j=1)
  * since the first "square" does not have 4 corners. Consequently the sum of all
- * corners can be found by summing 16*j^2 + 4*j + 4 from j=0 to [1001/2] and add
+ * corners can be found by summing 16*j^2 + 4*j + 4 from j=1 to [1001/2] and add
  * 1 for the innermost "square". (There are exact formulas for this, but
  * for the purpose of this problem a direct summation suffices.)
  */
