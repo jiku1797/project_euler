@@ -54,7 +54,7 @@ inline underlying_t problem_28()
 
   return sum;
 }
-} // namespace problem_26
+} // namespace problem_28
 
 TEST(Problem28, CorrectAnswer)
 {

@@ -58,7 +58,7 @@ inline underlying_t problem_27()
 
   return best_a * best_b;
 }
-} // namespace problem_26
+} // namespace problem_27
 
 TEST(Problem27, CorrectAnswer)
 {
