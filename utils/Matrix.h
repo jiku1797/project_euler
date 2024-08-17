@@ -35,19 +35,19 @@ public:
    static_assert(ROW > 0UL && COL > 0UL, "ROW and COL must both be positive");
 
 private:
-   std::array<value_type, (ROW * COL)> data_{};
+   std::array<value_type, ROW * COL> data_{};
 
 public:
    constexpr Matrix() noexcept = default;
 
    constexpr Matrix(const Matrix& copy) noexcept
+      : data_(copy.data_)
    {
-      data_ = copy.data_;
    }
 
    constexpr Matrix(Matrix&& move) noexcept
+      : data_(std::move(move.data_))
    {
-      data_ = std::move(move.data_);
       move.data_ = {};
    }
 
@@ -109,25 +109,25 @@ public:
 
    /// methods:
 
-   [[nodiscard]] constexpr auto col() const -> size_type
+   [[nodiscard]] static constexpr auto col() -> size_type
    {
       return COL;
    }
 
-   [[nodiscard]] constexpr auto row() const -> size_type
+   [[nodiscard]] static constexpr auto row() -> size_type
    {
       return ROW;
    }
 
    /// \get: row and column
-   [[nodiscard]] constexpr auto dim() const -> Dimensions
+   [[nodiscard]] static constexpr auto dim() -> Dimensions
    {
       return {ROW, COL};
    }
 
    ///
    /// \return Total number of elements
-   [[nodiscard]] constexpr auto size() const -> size_type
+   [[nodiscard]] static constexpr auto size() -> size_type
    {
       return ROW * COL;
    }
@@ -139,7 +139,7 @@ public:
    template <const size_type row, size_type col>
    [[nodiscard]] constexpr auto at() -> reference
    {
-      static_assert((row >= 0 && col >= 0) && (row < ROW && col < COL));
+      static_assert(row < ROW && col < COL);
       return data_[(row * COL) + col];
    }
 
@@ -150,7 +150,7 @@ public:
    template <const size_type row, size_type col>
    [[nodiscard]] constexpr auto at() const -> value_type
    {
-      static_assert((row >= 0 && col >= 0) && (row < ROW && col < COL));
+      static_assert(row < ROW && col < COL);
       return data_[(row * COL) + col];
    }
 
@@ -256,11 +256,11 @@ public:
 
    constexpr Matrix& operator+=(const Matrix& rhs) noexcept
    {
-      for(size_type j{}; const auto& i : rhs)
-      {
-         data_[j] += i;
-         ++j;
-      }
+      std::transform(std::cbegin(data_), std::cend(data_),
+         std::cbegin(rhs.data_), std::begin(data_),
+         [](value_type l_val, value_type r_val) {
+            return l_val + r_val;
+         });
       
       return *this;
    }
@@ -273,10 +273,10 @@ public:
 
    constexpr Matrix& operator+=(const value_type scalar) noexcept
    {
-      for(auto&& i : *this)
-      {
-         i += scalar;
-      }
+      std::transform(std::cbegin(data_), std::cend(data_), std::begin(data_),
+         [scalar](value_type val) {
+            return val + scalar;
+         });
       
       return *this;
    }
@@ -287,13 +287,13 @@ public:
       return lhs;
    }
    
-   [[nodiscard]] constexpr Matrix& operator*(value_type val) noexcept
+   [[nodiscard]] constexpr Matrix& operator*(value_type scalar) noexcept
    {
-      for(auto&& i : *this)
-      {
-         i *= val;
-      }
-      
+      std::transform(std::cbegin(data_), std::cend(data_), std::begin(data_),
+         [scalar](value_type val) {
+            return val * scalar;
+         });
+
       return *this;
    }
 
@@ -313,7 +313,7 @@ public:
       Matrix<value_type, ROW, COL> temp{};
       for(size_type i{}; i < ROW; ++i)
       {
-         for(size_type k{}; k < rhs.row(); ++k)
+         for(size_type k{}; k < row(); ++k)
          {
             for(size_type j{}; j < COL; ++j)
             {
@@ -364,10 +364,11 @@ public:
 
    constexpr Matrix& operator-=(const value_type scalar) noexcept
    {
-      for(auto&& i : *this)
-      {
-         i -= scalar;
-      }
+      std::transform(std::cbegin(data_), std::cend(data_), std::begin(data_),
+         [scalar](value_type val) {
+            return val - scalar;
+         });
+
       return *this;
    }
 
