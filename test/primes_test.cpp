@@ -45,7 +45,7 @@ TEST(TestSieveOfEratosthenes, TestSieveOfEratosthenes)
    expected[9] = false;
    expected[10] = false;
 
-   const auto actual = primes::sieve_of_Eratosthenes<10>();
+   constexpr auto actual = primes::sieve_of_Eratosthenes<10>();
 
    EXPECT_EQ(expected, actual);
 }

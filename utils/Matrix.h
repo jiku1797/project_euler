@@ -261,7 +261,7 @@ public:
          [](value_type l_val, value_type r_val) {
             return l_val + r_val;
          });
-      
+
       return *this;
    }
 

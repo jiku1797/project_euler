@@ -28,8 +28,8 @@ TEST(TestMatrix, testRowAndCol)
 
 TEST(TestMatrix, testDim)
 {
-   constexpr Matrix<int, 2, 3> mat(0, 3, 5, 5, 5, 2);
-   const auto dim = mat.dim();
+   using Mat = Matrix<int, 2, 3>;
+   constexpr auto dim = Mat::dim();
 
    EXPECT_EQ(dim.row_, 2);
    EXPECT_EQ(dim.col_, 3);
@@ -97,25 +97,25 @@ TEST(TestMatrix, testTransposeSquared)
 
    mat.transpose_squared();
 
-   const Matrix<int, 3, 3> expected(0, 3, 6,
-                                    1, 4, 7,
-                                    2, 5, 8);
+   constexpr Matrix<int, 3, 3> expected(0, 3, 6,
+                                        1, 4, 7,
+                                        2, 5, 8);
 
    EXPECT_TRUE(sr::equal(mat, expected));
 }
 
 TEST(TestMatrix, testTranspose)
 {
-   Matrix<int, 4, 3> mat(0, 1, 2,
-                         3, 4, 5,
-                         6, 7, 8,
-                         9, 10, 11);
+   constexpr Matrix<int, 4, 3> mat(0, 1, 2,
+                                   3, 4, 5,
+                                   6, 7, 8,
+                                   9, 10, 11);
 
-   const auto transpose = mat.transpose();
+   constexpr auto transpose = mat.transpose();
 
-   const Matrix<int, 3, 4> expected(0, 3, 6, 9,
-                                    1, 4, 7, 10,
-                                    2, 5, 8, 11);
+   constexpr Matrix<int, 3, 4> expected(0, 3, 6, 9,
+                                        1, 4, 7, 10,
+                                        2, 5, 8, 11);
 
    EXPECT_TRUE(sr::equal(transpose, expected));
 }
