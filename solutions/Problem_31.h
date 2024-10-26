@@ -27,7 +27,7 @@ inline underlying_t problem_31()
 
    for(auto coin : coins)
    {
-      for(const auto i : std::views::iota(coin, target+2))
+      for(const auto i : std::views::iota(coin, target+1))
       {
          ways[i] += ways[i-coin];
       }
