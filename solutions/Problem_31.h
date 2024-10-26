@@ -3,6 +3,8 @@
 
 #include <gtest/gtest.h>
 
+#include <array>
+
 /*
 * Coin Sums
 * In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight
