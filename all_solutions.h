@@ -33,5 +33,6 @@
 #include "Problem_28.h"
 #include "Problem_29.h"
 #include "Problem_30.h"
+#include "Problem_31.h"
 
 #endif //PROJECT_EULER_SOLUTIONS_ALL_SOLUTIONS_H
