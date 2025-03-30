@@ -51,7 +51,7 @@ jobs:
           rm -rf build
           mkdir build
           cd build
-          cmake -DCMAKE_BUILD_TYPE=Relase ..
+          cmake -DCMAKE_BUILD_TYPE=Release ..
           make
           ctest
           lcov --capture --directory . --output-file coverage.info        
