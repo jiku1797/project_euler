@@ -30,33 +30,33 @@ using underlying_t = int32_t;
 
 inline underlying_t problem_27()
 {
-  static constexpr underlying_t limit = 1'000;
-  underlying_t consecutive = 0;
-  underlying_t best_a = 0;
-  underlying_t best_b = 0;
+   static constexpr underlying_t limit = 1'000;
+   underlying_t consecutive = 0;
+   underlying_t best_a = 0;
+   underlying_t best_b = 0;
 
-  // simple brute-force approach
-  for (underlying_t a = -limit; a <= limit; ++a)
-  {
-    for (underlying_t b = -limit; b <= limit; ++b)
-    {
-      // count number of consecutive prime numbers
-      underlying_t length = 0;
-      while (primes::is_prime(length * length + a * length + b))
+   // simple brute-force approach
+   for (underlying_t a = -limit; a <= limit; ++a)
+   {
+      for (underlying_t b = -limit; b <= limit; ++b)
       {
-        length++;
-      }
+         // count number of consecutive prime numbers
+         underlying_t length = 0;
+         while (primes::is_prime(length * length + a * length + b))
+         {
+            length++;
+         }
 
-      if (consecutive < length)
-      {
-        consecutive = length;
-        best_a = a;
-        best_b = b;
+         if (consecutive < length)
+         {
+            consecutive = length;
+            best_a = a;
+            best_b = b;
+         }
       }
-    }
-  }
+   }
 
-  return best_a * best_b;
+   return best_a * best_b;
 }
 } // namespace problem_27
 
