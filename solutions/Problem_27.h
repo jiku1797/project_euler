@@ -62,7 +62,7 @@ inline underlying_t problem_27()
 
 TEST(Problem27, CorrectAnswer)
 {
-  EXPECT_EQ(problem_27::problem_27(), -59231);
+   EXPECT_EQ(problem_27::problem_27(), -59231);
 }
 
 #endif //PROJECT_EULER_SOLUTIONS_PROBLEM_27_H
