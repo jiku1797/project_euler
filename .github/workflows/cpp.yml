@@ -48,6 +48,7 @@ jobs:
 
       - name: Build and run coverage
         run: |
+          rm -rf build
           mkdir build
           cd build
           cmake -DCMAKE_BUILD_TYPE=Relase ..

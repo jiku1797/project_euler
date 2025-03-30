@@ -1,5 +1,5 @@
-#ifndef DEV_PROBLEM_8_H
-#define DEV_PROBLEM_8_H
+#ifndef PROJECT_EULER_SOLUTIONS_PROBLEM_8_H
+#define PROJECT_EULER_SOLUTIONS_PROBLEM_8_H
 
 #include <gtest/gtest.h>
 
@@ -101,4 +101,4 @@ TEST(Problem8, CorrectAnswer)
    EXPECT_EQ(problem_8(), 23514624000);
 }
 
-#endif //DEV_PROBLEM_8_H
+#endif //PROJECT_EULER_SOLUTIONS_PROBLEM_8_H
