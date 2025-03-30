@@ -50,7 +50,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake -DCMAKE_BUILD_TYPE=Debug ..
+          cmake -DCMAKE_BUILD_TYPE=Relase ..
           make
           ctest
           lcov --capture --directory . --output-file coverage.info        
