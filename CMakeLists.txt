@@ -77,6 +77,7 @@ set(HEADERS
         solutions/Problem_30.h
         solutions/Problem_31.h
         solutions/Problem_32.h
+        solutions/Problem_33.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
