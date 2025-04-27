@@ -2,6 +2,7 @@
 #define PROJECT_EULER_SOLUTIONS_FACTORIALS_H
 
 #include <vector>
+#include <unordered_map>
 #include <ranges>
 #include <cmath>
 
@@ -59,6 +60,20 @@ inline Digits factorial(int n)
    }
    return digits;
 }
+
+template<typename T>
+inline static std::unordered_map<T, std::uint32_t> factorials = {
+   {0, 1},
+   {1, 1},
+   {2, 2},
+   {3, 6},
+   {4, 24},
+   {5, 120},
+   {6, 720},
+   {7, 5040},
+   {8, 40320},
+   {9, 362880}
+};
 }
 
 #endif //PROJECT_EULER_SOLUTIONS_FACTORIALS_H

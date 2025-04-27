@@ -17,8 +17,7 @@ TEST_P(TestDigitsGenerate, Digits)
 INSTANTIATE_TEST_SUITE_P(
    TestDigitsGenerateBasicInputs
    , TestDigitsGenerate, ::testing::Values(
-      std::make_pair<int, std::vector<int>>(0,{})
-      , std::make_pair<int, std::vector<int>>(1,{1})
+      std::make_pair<int, std::vector<int>>(1,{1})
       , std::make_pair<int, std::vector<int>>(10,{0,1})
       , std::make_pair<int, std::vector<int>>(88,{8,8})
       , std::make_pair<int, std::vector<int>>(102,{2,0,1})

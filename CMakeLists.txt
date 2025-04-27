@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 set(PROJ_NAME project_euler_solutions)
 project(${PROJ_NAME})
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 
 list(APPEND ${CMAKE_CXX_FLAGS_DEBUG} "-g -O0")
 list(APPEND ${CMAKE_CXX_FLAGS_RELEASE} "-O3 -NDEBUG")
@@ -78,6 +78,7 @@ set(HEADERS
         solutions/Problem_31.h
         solutions/Problem_32.h
         solutions/Problem_33.h
+        solutions/Problem_34.h
 )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)

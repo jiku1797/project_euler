@@ -7,12 +7,20 @@
 
 namespace digits
 {
+auto num_digits(std::integral auto n)
+{
+   return std::floor(std::log10(n)) + 1;
+}
+
 ///
 /// \param n A positive integer
 /// \return Digits in "reverse" order (a_0, a_1, ..., a_n)
 std::vector<int> digits(std::integral auto n)
 {
    std::vector<int> digits;
+   const auto size = num_digits(n);
+   digits.reserve(size);
+
    while(n > 0)
    {
       digits.push_back(n % 10);
@@ -35,11 +43,6 @@ bool is_palindrome(std::integral auto n)
       if(ds[i] != ds[sz - i - 1]) return false;
    }
    return true;
-}
-
-auto num_digits(std::integral auto n)
-{
-   return std::floor(std::log10(n)) + 1;
 }
 }
 #endif //PROJECT_EULER_SOLUTIONS_DIGITS_H
