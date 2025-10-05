@@ -5,6 +5,8 @@
 #include <algorithm>
 #include <numeric>
 
+#include <gtest/gtest.h>
+
 /*
 * Pandigital Products
 *

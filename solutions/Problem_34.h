@@ -5,6 +5,8 @@
 
 #include "factorials.h"
 
+#include <gtest/gtest.h>
+
 /*
 * Digit Factorials
 *

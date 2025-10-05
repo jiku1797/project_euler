@@ -5,10 +5,11 @@
 #include <cmath>
 #include <array>
 #include <iterator>
+#include <unordered_set>
 
 namespace primes
 {
-inline bool is_prime(std::integral auto num)
+bool is_prime(std::integral auto num)
 {
    if(num <= 1) return false;
    if (num <= 3) return true;
@@ -26,6 +27,31 @@ inline bool is_prime(std::integral auto num)
    }
 
    return true;
+}
+
+/**
+ *
+ * \param limit Primes up to and including this
+ * \return Set of all primes up to and including \p limit
+ */
+auto primes(std::integral auto limit)
+{
+   using prime_set = std::unordered_set<std::uint32_t>;
+   prime_set primes;
+   if(limit >= 2)
+   {
+      primes.insert(2);
+   }
+
+   for(int i = 3; i <= limit; i += 2)
+   {
+      if(is_prime(i))
+      {
+         primes.insert(i);
+      }
+   }
+
+   return primes;
 }
 
 template<std::size_t N>

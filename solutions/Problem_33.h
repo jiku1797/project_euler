@@ -4,6 +4,8 @@
 #include <ranges>
 #include <numeric>
 
+#include <gtest/gtest.h>
+
 /*
 * Digit Cancelling Fractions
 *

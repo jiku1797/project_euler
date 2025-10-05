@@ -49,3 +49,23 @@ TEST(TestSieveOfEratosthenes, TestSieveOfEratosthenes)
 
    EXPECT_EQ(expected, actual);
 }
+
+using prime_t = std::uint32_t;
+using prime_set = decltype(primes::primes(2));
+
+class TestPrimeSet : public testing::TestWithParam<std::pair<prime_t, prime_set>>{};
+
+TEST_P(TestPrimeSet, TestPrimeSetBasic)
+{
+   const auto [num, expected] = GetParam();
+   const auto actual = primes::primes(num);
+   EXPECT_EQ(actual, expected);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+   TestPrimesBasicInputs
+   , TestPrimeSet, ::testing::Values(
+      std::make_pair<prime_t, prime_set>(2,{2})
+      , std::make_pair<prime_t, prime_set>(16,{2, 3, 5, 7, 11, 13})
+      , std::make_pair<prime_t, prime_set>(23,{2, 3, 5, 7, 11, 13, 17, 19, 23}))
+);
