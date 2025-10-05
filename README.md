@@ -1,4 +1,4 @@
-[![Standard](https://img.shields.io/badge/standard-C%2B%2B20-blue.svg?logo=c%2B%2B)](https://en.wikipedia.org/wiki/C%2B%2B#Standardization)
+![standard: C++23](https://img.shields.io/badge/standard-C%2B%2B23-blue?logo=cplusplus&logoColor=white&style=flat)
 [![CI Build Status](https://github.com/jiku1797/project_euler/actions/workflows/cpp.yml/badge.svg)](https://github.com/jiku1797/project_euler/actions/workflows/cpp.yml)
 [![codecov](https://codecov.io/gh/jiku1797/project_euler/graph/badge.svg?token=CX6MFF3LV9)](https://codecov.io/gh/jiku1797/project_euler)
 
